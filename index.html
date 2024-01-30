@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Color Scheme Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <form class="select-container">
+          <input type="color" value="#F55A5A" name="color-picker" id="color-picker" aria-label="color-picker" />
+          <div class="dropdown">
+            <button class="dropdown-btn">Monochrome</button>
+            <div class="dropdown-content">
+              <p class="option">Monochrome</p>
+              <p class="option">Monochrome-dark</p>
+              <p class="option">Monochrome-light</p>
+              <p class="option">Analogic</p>
+              <p class="option">Complement</p>
+              <p class="option">Analogic-complement</p>
+              <p class="option">Triad</p>
+            </div>
+          </div>
+          <button id="color-btn" type="submit">Get color scheme</button>
+        </form>
+        <div class="color-container"></div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<!--          <select class="select" aria-label="color-select">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+        </select>      -->

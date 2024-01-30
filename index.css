@@ -1,0 +1,130 @@
+/* General */
+
+* {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #1c1c1c;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+}
+
+form {
+  width: 550px;
+  height: 90px;
+  border: 2px solid black;
+}
+
+/* Color Picker */
+
+#color-picker {
+  height: 42px;
+  width: 61px;
+  border: none;
+  appearance: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: #e5e5e5;
+  padding: 0;
+}
+
+.select {
+  height: 42px;
+  width: 312px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 9px 37px 9px 13px;
+  appearance: none;
+  background: url("images/arrow.png") no-repeat;
+  background-position: center right 10px;
+  background-size: 14px 7px;
+  background-color: #fff;
+}
+
+/* Dropdown List */
+
+.dropdown-btn {
+  height: 42px;
+  width: 312px;
+  color: black;
+  text-align: left;
+  padding-left: 13px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: url("images/arrow.png") no-repeat;
+  background-position: center right 10px;
+  background-size: 14px 7px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  width: 312px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding-top: 10px;
+  z-index: 1;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+  display: block;
+  padding: 8px 16px 8px 12px;
+  font-size: 16px;
+  /* TODO: Add this to a class that is applied once the color has been selected */
+  background: url("images/check.png") no-repeat;
+  background-position: center right 10px;
+  background-size: 14px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.option:hover {
+  font-weight: 600;
+}
+
+/* Send request button */
+
+#color-btn {
+  width: 123px;
+  height: 42px;
+  font-size: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+#color-btn:hover {
+  background-color: #d1d5db;
+}
