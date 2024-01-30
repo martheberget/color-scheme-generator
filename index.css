@@ -26,6 +26,7 @@ button {
   align-items: center;
   justify-content: space-evenly;
   background-color: #fff;
+  border-bottom: 0;
 }
 
 form {
@@ -46,19 +47,6 @@ form {
   -webkit-appearance: none;
   background-color: #e5e5e5;
   padding: 0;
-}
-
-.select {
-  height: 42px;
-  width: 312px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  padding: 9px 37px 9px 13px;
-  appearance: none;
-  background: url("images/arrow.png") no-repeat;
-  background-position: center right 10px;
-  background-size: 14px 7px;
-  background-color: #fff;
 }
 
 /* Dropdown List */
@@ -114,7 +102,7 @@ form {
   font-weight: 600;
 }
 
-/* Send request button */
+/* Button */
 
 #color-btn {
   width: 123px;
@@ -127,4 +115,32 @@ form {
 
 #color-btn:hover {
   background-color: #d1d5db;
+}
+
+/* Colors */
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2px 2px 2px;
+}
+
+.rectangle:nth-child(1) {
+  fill: pink;
+}
+
+.rectangle:nth-child(2) {
+  fill: red;
+}
+
+.rectangle:nth-child(3) {
+  fill: blue;
+}
+
+.rectangle:nth-child(4) {
+  fill: green;
+}
+
+.rectangle:nth-child(5) {
+  fill: yellow;
 }
