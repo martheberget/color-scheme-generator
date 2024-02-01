@@ -2,11 +2,13 @@
 
 * {
   margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #1c1c1c;
+  background-color: rgb(44, 44, 44);
 }
 
 button {
@@ -19,20 +21,25 @@ button {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
 .select-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #fff;
+  background-color: #fffdfe;
+  min-width: 550px;
   border-bottom: 0;
+  position: absolute; /* Position form absolutely within the container */
+  z-index: 2; /* Set a higher z-index for the form element */
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 form {
-  width: 550px;
-  height: 90px;
-  border: 2px solid black;
+  min-width: 550px;
+  min-height: 90px;
+  z-index: 2;
 }
 
 /* Color Picker */
@@ -46,7 +53,7 @@ form {
   -moz-appearance: none;
   -webkit-appearance: none;
   background-color: #e5e5e5;
-  padding: 0;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* Dropdown List */
@@ -61,9 +68,10 @@ form {
   cursor: pointer;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  background: url("images/arrow.png") no-repeat;
+  background: url("icons/arrow.png") no-repeat;
   background-position: center right 10px;
   background-size: 14px 7px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .dropdown {
@@ -76,8 +84,8 @@ form {
   position: absolute;
   cursor: pointer;
   width: 312px;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #fffdfe;
+  border: 1px solid #fffdfe;
   border-radius: 6px;
   padding-top: 10px;
   z-index: 1;
@@ -89,7 +97,7 @@ form {
   padding: 8px 16px 8px 12px;
   font-size: 16px;
   /* TODO: Add this to a class that is applied once the color has been selected */
-  background: url("images/check.png") no-repeat;
+  background: url("icons/check.png") no-repeat;
   background-position: center right 10px;
   background-size: 14px 10px;
 }
@@ -110,7 +118,8 @@ form {
   font-size: 12px;
   border: 1px solid #d1d5db;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #fffdfe;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 #color-btn:hover {
@@ -122,25 +131,61 @@ form {
 .colors {
   display: flex;
   flex-direction: row;
-  padding: 0 2px 2px 2px;
+  z-index: 1;
+}
+
+.rectangle {
+  position: relative;
+  height: 550px;
+  width: 110px;
+  z-index: 0; /* Set a lower z-index for each rectangle */
 }
 
 .rectangle:nth-child(1) {
-  fill: pink;
+  background-color: pink;
 }
 
 .rectangle:nth-child(2) {
-  fill: red;
+  background-color: red;
 }
 
 .rectangle:nth-child(3) {
-  fill: blue;
+  background-color: blue;
 }
 
 .rectangle:nth-child(4) {
-  fill: green;
+  background-color: green;
 }
 
 .rectangle:nth-child(5) {
-  fill: yellow;
+  background-color: yellow;
+}
+
+/* Hex Codes */
+
+.codes {
+  min-width: 550px;
+  min-height: 46px;
+  background-color: #fffdfe;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hex {
+  text-align: center;
+  padding: 11px 27px;
+  line-height: 1;
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+.codes p {
+  font-size: 0.75em;
+  color: #2b283a;
 }
