@@ -58,7 +58,7 @@ form {
 
 /* Dropdown List */
 
-.dropdown-btn {
+#dropdown-btn {
   height: 42px;
   width: 312px;
   color: black;
@@ -142,23 +142,23 @@ form {
 }
 
 .rectangle:nth-child(1) {
-  background-color: pink;
+  background-color: #c01010;
 }
 
 .rectangle:nth-child(2) {
-  background-color: red;
+  background-color: #ed1515;
 }
 
 .rectangle:nth-child(3) {
-  background-color: blue;
+  background-color: #f24444;
 }
 
 .rectangle:nth-child(4) {
-  background-color: green;
+  background-color: #f67373;
 }
 
 .rectangle:nth-child(5) {
-  background-color: yellow;
+  background-color: #f9a2a2;
 }
 
 /* Hex Codes */

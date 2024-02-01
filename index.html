@@ -15,16 +15,16 @@
         <form class="select-container">
           <input type="color" value="#F55A5A" name="color-picker" id="color-picker" aria-label="color-picker" />
           <div class="dropdown">
-            <button class="dropdown-btn">Monochrome</button>
-            <div class="dropdown-content">
-              <p class="option">Monochrome</p>
-              <p class="option">Monochrome-dark</p>
-              <p class="option">Monochrome-light</p>
-              <p class="option">Analogic</p>
-              <p class="option">Complement</p>
-              <p class="option">Analogic-complement</p>
-              <p class="option">Triad</p>
-            </div>
+            <button role="combobox" aria-controls="listbox" aria-expanded="false" id="dropdown-btn" value="monochrome">Monochrome</button>
+            <ul role="listbox" id="listbox" class="dropdown-content">
+              <li class="option">Monochrome</li>
+              <li class="option">Monochrome-dark</li>
+              <li class="option">Monochrome-light</li>
+              <li class="option">Analogic</li>
+              <li class="option">Complement</li>
+              <li class="option">Analogic-complement</li>
+              <li class="option">Triad</li>
+            </ul>
           </div>
           <button id="color-btn" type="submit">Get color scheme</button>
         </form>
@@ -38,11 +38,11 @@
         <div class="color-container"></div>
       </main>
       <div class="codes">
-        <p class="hex">#F55A5A</p>
-        <p class="hex">#F55A5A</p>
-        <p class="hex">#F55A5A</p>
-        <p class="hex">#F55A5A</p>
-        <p class="hex">#F55A5A</p>
+        <p id="hex1" class="hex" onclick="copyToClipboard('hex1')">#C01010</p>
+        <p id="hex2" class="hex" onclick="copyToClipboard('hex2')">#ED1515</p>
+        <p id="hex3" class="hex" onclick="copyToClipboard('hex3')">#F24444</p>
+        <p id="hex4" class="hex" onclick="copyToClipboard('hex4')">#F67373</p>
+        <p id="hex5" class="hex" onclick="copyToClipboard('hex5')">#F9A2A2</p>
       </div>
     </div>
     <script src="index.js"></script>
