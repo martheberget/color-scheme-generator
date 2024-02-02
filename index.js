@@ -4,34 +4,45 @@ const colorPicker = document.querySelector("#color-picker");
 const getColorsBtn = document.querySelector("#color-btn");
 const hexCodes = document.querySelectorAll(".hex");
 const dropdownList = document.querySelector(".dropdown-content");
+const dropdownValues = document.querySelectorAll(".option");
+const dropdownButton = document.querySelector("#dropdown-btn");
 
 // Constants
 const baseURL = "https://www.thecolorapi.com/";
 const count = 5;
 
+// Hex Codes
 hexCodes.forEach((hexElement) => {
   hexElement.addEventListener("click", () => {
     let id = hexElement.id;
     copyToClipboard(id);
-    let copiedText = `<span class="tooltip">Copied!</span>`;
-    hexElement.insertAdjacentHTML("afterend", copiedText);
-    setTimeout(() => {
-      hexElement.nextElementSibling.remove();
-    }, 500);
+    showCopiedTooltip(hexElement);
   });
 });
 
+// Dropdown
 dropdownSelect.addEventListener("click", (e) => {
   e.preventDefault();
   dropdownList.classList.toggle("visible");
 });
 
+dropdownValues.forEach((scheme) => {
+  scheme.addEventListener("click", (e) => {
+    let selectedScheme = scheme.textContent;
+    dropdownValues.forEach((option) => {
+      option.classList.remove("selected");
+    });
+    scheme.classList.add("selected");
+    dropdownButton.innerText = selectedScheme;
+    dropdownList.classList.toggle("visible");
+  });
+});
+
 getColorsBtn.addEventListener("click", (e) => {
   e.preventDefault();
   let hexCode = colorPicker.value.slice(1, colorPicker.value.length);
-  let mode = dropdownSelect.value;
+  let mode = dropdownSelect.innerText.toLowerCase();
   getColors(hexCode, mode, count).then((data) => {
-    console.log(data);
     updateHexCodes(data);
     updateColors(data);
   });
@@ -64,4 +75,12 @@ function updateColors(colorsArray) {
 function copyToClipboard(id) {
   let text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text);
+}
+
+function showCopiedTooltip(hexElement) {
+  let copiedText = `<span class="tooltip">Copied!</span>`;
+  hexElement.insertAdjacentHTML("afterend", copiedText);
+  setTimeout(() => {
+    hexElement.nextElementSibling.remove();
+  }, 500);
 }

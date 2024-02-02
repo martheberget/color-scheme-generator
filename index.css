@@ -31,8 +31,8 @@ button {
   background-color: #fffdfe;
   min-width: 550px;
   border-bottom: 0;
-  position: absolute; /* Position form absolutely within the container */
-  z-index: 2; /* Set a higher z-index for the form element */
+  position: absolute;
+  z-index: 2;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -54,6 +54,7 @@ form {
   -webkit-appearance: none;
   background-color: #e5e5e5;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 /* Dropdown List */
@@ -90,6 +91,7 @@ form {
   padding-top: 10px;
   z-index: 1;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
 }
 
 .visible {
@@ -100,15 +102,13 @@ form {
   display: block;
   padding: 8px 16px 8px 12px;
   font-size: 16px;
-  /* TODO: Add this to a class that is applied once the color has been selected */
+}
+
+.selected {
   background: url("icons/check.png") no-repeat;
   background-position: center right 10px;
   background-size: 14px 10px;
 }
-
-/* .dropdown:hover .dropdown-content {
-  display: block;
-} */
 
 .option:hover {
   font-weight: 600;
@@ -124,6 +124,7 @@ form {
   border-radius: 4px;
   background-color: #fffdfe;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 #color-btn:hover {
@@ -142,7 +143,7 @@ form {
   position: relative;
   height: 550px;
   width: 110px;
-  z-index: 0; /* Set a lower z-index for each rectangle */
+  z-index: 0;
 }
 
 .rectangle:nth-child(1) {
