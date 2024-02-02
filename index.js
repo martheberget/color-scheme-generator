@@ -1,9 +1,13 @@
+// Elements
 const dropdownSelect = document.querySelector("#dropdown-btn");
 const colorPicker = document.querySelector("#color-picker");
 const getColorsBtn = document.querySelector("#color-btn");
+const hexCodes = document.querySelectorAll(".hex");
+const dropdownList = document.querySelector(".dropdown-content");
+
+// Constants
 const baseURL = "https://www.thecolorapi.com/";
 const count = 5;
-const hexCodes = document.querySelectorAll(".hex");
 
 hexCodes.forEach((hexElement) => {
   hexElement.addEventListener("click", () => {
@@ -15,6 +19,11 @@ hexCodes.forEach((hexElement) => {
       hexElement.nextElementSibling.remove();
     }, 500);
   });
+});
+
+dropdownSelect.addEventListener("click", (e) => {
+  e.preventDefault();
+  dropdownList.classList.toggle("visible");
 });
 
 getColorsBtn.addEventListener("click", (e) => {
