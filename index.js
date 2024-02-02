@@ -3,6 +3,19 @@ const colorPicker = document.querySelector("#color-picker");
 const getColorsBtn = document.querySelector("#color-btn");
 const baseURL = "https://www.thecolorapi.com/";
 const count = 5;
+const hexCodes = document.querySelectorAll(".hex");
+
+hexCodes.forEach((hexElement) => {
+  hexElement.addEventListener("click", () => {
+    let id = hexElement.id;
+    copyToClipboard(id);
+    let copiedText = `<span class="tooltip">Copied!</span>`;
+    hexElement.insertAdjacentHTML("afterend", copiedText);
+    setTimeout(() => {
+      hexElement.nextElementSibling.remove();
+    }, 500);
+  });
+});
 
 getColorsBtn.addEventListener("click", (e) => {
   e.preventDefault();
