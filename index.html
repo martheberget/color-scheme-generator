@@ -7,36 +7,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="index.css" />
-    <title>Color Scheme Generator</title>
+    <title>Test</title>
   </head>
   <body>
     <div class="container">
-      <main>
-        <form class="select-container">
-          <input type="color" value="#F55A5A" name="color-picker" id="color-picker" aria-label="color-picker" />
-          <div class="dropdown">
-            <button role="combobox" aria-controls="listbox" aria-expanded="false" id="dropdown-btn" type="button">Monochrome</button>
-            <ul role="listbox" id="listbox" class="dropdown-content">
-              <li class="option selected">Monochrome</li>
-              <li class="option">Monochrome-dark</li>
-              <li class="option">Monochrome-light</li>
-              <li class="option">Analogic</li>
-              <li class="option">Complement</li>
-              <li class="option">Analogic-complement</li>
-              <li class="option">Triad</li>
-            </ul>
-          </div>
-          <button id="color-btn" type="submit">Get color scheme</button>
-        </form>
-        <div class="colors">
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
-          <div class="rectangle"></div>
+      <form action="" class="container-form">
+        <input type="color" name="color-picker" id="color-picker" value="#F55A5A" />
+        <div class="dropdown">
+          <button type="button" id="dropdown-btn">Monochrome</button>
+          <ul class="dropdown-content">
+            <li class="option selected">Monochrome</li>
+            <li class="option">Monochrome-dark</li>
+            <li class="option">Monochrome-light</li>
+            <li class="option">Analogic</li>
+            <li class="option">Complement</li>
+            <li class="option">Analogic-complement</li>
+            <li class="option">Triad</li>
+          </ul>
         </div>
-        <div class="color-container"></div>
-      </main>
+        <button id="color-btn" type="submit">Get color scheme</button>
+      </form>
+      <div class="colors">
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+      </div>
       <div class="codes">
         <div class="codes-container"><p id="hex1" class="hex">#C01010</p></div>
         <div class="codes-container"><p id="hex2" class="hex">#ED1515</p></div>
@@ -48,13 +45,3 @@
     <script src="index.js"></script>
   </body>
 </html>
-
-<!--          <select class="select" aria-label="color-select">
-          <option value="monochrome">Monochrome</option>
-          <option value="monochrome-dark">Monochrome-dark</option>
-          <option value="monochrome-light">Monochrome-light</option>
-          <option value="analogic">Analogic</option>
-          <option value="complement">Complement</option>
-          <option value="analogic-complement">Analogic-complement</option>
-          <option value="triad">Triad</option>
-        </select>      -->

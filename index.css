@@ -1,10 +1,11 @@
-/* General */
+/* GENERAL */
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
@@ -18,61 +19,66 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   position: relative;
 }
 
-.select-container {
+/* FORM */
+
+.container-form {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   background-color: #fffdfe;
-  min-width: 550px;
-  border-bottom: 0;
-  position: absolute;
+  width: 350px;
   z-index: 2;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 form {
-  min-width: 550px;
-  min-height: 90px;
+  min-width: 350px;
+  min-height: 60px;
   z-index: 2;
 }
 
-/* Color Picker */
+/* COLOR-PICKER */
 
 #color-picker {
-  height: 42px;
-  width: 61px;
+  height: 30px;
+  width: 42px;
   border: none;
   appearance: none;
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   background-color: #e5e5e5;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* Dropdown List */
+/* DROPDOWN-LIST */
 
 #dropdown-btn {
-  height: 42px;
-  width: 312px;
+  height: 35px;
+  width: 190px;
   color: black;
   text-align: left;
-  padding-left: 13px;
-  font-size: 16px;
+  padding-left: 0.8em;
+  font-size: 0.7rem;
   cursor: pointer;
   border: 1px solid #d1d5db;
   border-radius: 6px;
   background: url("icons/arrow.png") no-repeat;
   background-position: center right 10px;
-  background-size: 14px 7px;
+  background-size: 12px 5px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease-in;
+}
+
+#dropdown-btn:hover {
+  background-color: #d1d5db;
 }
 
 .dropdown {
@@ -84,14 +90,15 @@ form {
   display: none;
   position: absolute;
   cursor: pointer;
-  width: 312px;
+  width: 190px;
   background-color: #fffdfe;
   border: 1px solid #fffdfe;
   border-radius: 6px;
-  padding-top: 10px;
+  padding-top: 0.625em;
   z-index: 1;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 1s ease;
+  list-style: none;
 }
 
 .visible {
@@ -100,50 +107,55 @@ form {
 
 .option {
   display: block;
-  padding: 8px 16px 8px 12px;
-  font-size: 16px;
+  font-size: 0.7rem;
+  padding: 0.5em 1em 0.5em 0.75em;
 }
 
 .selected {
   background: url("icons/check.png") no-repeat;
   background-position: center right 10px;
-  background-size: 14px 10px;
+  background-size: 12px 8px;
 }
 
 .option:hover {
   font-weight: 600;
 }
 
-/* Button */
+/* BUTTON */
 
 #color-btn {
-  width: 123px;
-  height: 42px;
-  font-size: 12px;
+  width: 90px;
+  height: 35px;
+  font-size: 0.55rem;
   border: 1px solid #d1d5db;
   border-radius: 4px;
   background-color: #fffdfe;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   cursor: pointer;
+  transition: background-color 0.2s ease-in;
 }
 
 #color-btn:hover {
   background-color: #d1d5db;
 }
 
-/* Colors */
+/* COLORS */
 
 .colors {
   display: flex;
-  flex-direction: row;
-  z-index: 1;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .rectangle {
-  position: relative;
-  height: 550px;
-  width: 110px;
+  flex: 1;
+  height: 300px;
+  width: 70px;
   z-index: 0;
+}
+
+.rectangle:last-child {
+  margin-right: 0; /* Remove margin from the last rectangle to avoid overflow */
 }
 
 .rectangle:nth-child(1) {
@@ -166,15 +178,15 @@ form {
   background-color: #f9a2a2;
 }
 
-/* Hex Codes */
+/* HEX CODES */
 
 .codes {
-  min-width: 550px;
-  min-height: 46px;
+  width: 350px;
+  height: 40px;
   background-color: #fffdfe;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   position: relative;
@@ -182,7 +194,7 @@ form {
 
 .hex {
   text-align: center;
-  padding: 11px 27px;
+  padding: 0.25em 0.5em;
   line-height: 1;
   cursor: pointer;
   position: relative;
@@ -190,23 +202,21 @@ form {
 
 .codes p,
 .tooltip {
-  font-size: 0.75em;
+  font-size: 0.5rem;
   color: #2b283a;
 }
 
-/* Tooltip */
-
 .tooltip {
-  min-width: 60px;
+  min-width: 45px;
   background-color: #d1d5db;
   text-align: center;
-  font-size: 0.65em;
+  font-size: 0.4rem;
   padding: 5px 0;
   border-radius: 6px;
   position: absolute;
   z-index: 3;
   opacity: 1;
-  bottom: 100%;
+  bottom: 160%;
   left: 50%;
   transform: translateX(-50%);
   transform: opacity 0.3s ease;
@@ -227,4 +237,71 @@ form {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+/* DESKTOP */
+
+@media (min-width: 600px) {
+  .container-form {
+    min-width: 550px;
+  }
+
+  form {
+    min-width: 550px;
+    min-height: 90px;
+  }
+
+  #color-picker {
+    height: 42px;
+    width: 61px;
+  }
+
+  #dropdown-btn {
+    height: 42px;
+    width: 312px;
+    padding-left: 13px;
+    font-size: 1rem;
+    background-size: 14px 7px;
+  }
+
+  .dropdown-content {
+    width: 312px;
+    border-radius: 6px;
+    padding-top: 10px;
+  }
+
+  .option {
+    font-size: 1rem;
+  }
+
+  .selected {
+    background-size: 14px 10px;
+  }
+
+  #color-btn {
+    width: 123px;
+    height: 42px;
+    font-size: 0.75rem;
+  }
+
+  .rectangle {
+    height: 460px;
+    width: 110px;
+  }
+
+  .codes {
+    min-width: 550px;
+    min-height: 46px;
+  }
+
+  .codes p,
+  .tooltip {
+    font-size: 0.75em;
+  }
+
+  .tooltip {
+    min-width: 60px;
+    font-size: 0.65em;
+    padding: 5px 0;
+  }
 }
