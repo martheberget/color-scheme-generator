@@ -53,6 +53,7 @@ form {
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  -webkit-border-radius: 0;
   background-color: #e5e5e5;
   cursor: pointer;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -63,7 +64,7 @@ form {
 #dropdown-btn {
   height: 35px;
   width: 190px;
-  color: black;
+  color: #2b283a;
   text-align: left;
   padding-left: 0.8em;
   font-size: 0.7rem;
@@ -129,6 +130,7 @@ form {
   font-size: 0.55rem;
   border: 1px solid #d1d5db;
   border-radius: 4px;
+  color: #2b283a;
   background-color: #fffdfe;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   cursor: pointer;
