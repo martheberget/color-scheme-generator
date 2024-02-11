@@ -78,10 +78,6 @@ form {
   transition: background-color 0.2s ease-in;
 }
 
-#dropdown-btn:hover {
-  background-color: #d1d5db;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -135,10 +131,6 @@ form {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   cursor: pointer;
   transition: background-color 0.2s ease-in;
-}
-
-#color-btn:hover {
-  background-color: #d1d5db;
 }
 
 /* COLORS */
@@ -272,6 +264,10 @@ form {
     padding-top: 10px;
   }
 
+  #dropdown-btn:hover {
+    background-color: #d1d5db;
+  }
+
   .option {
     font-size: 1rem;
   }
@@ -284,6 +280,10 @@ form {
     width: 123px;
     height: 42px;
     font-size: 0.75rem;
+  }
+
+  #color-btn:hover {
+    background-color: #d1d5db;
   }
 
   .rectangle {
