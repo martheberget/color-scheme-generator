@@ -1,10 +1,10 @@
 # Color Scheme Generator ❤️💛💚💙💜
 
-The Color Scheme Generator is a user-friendly web application that allows you to explore and create beautiful colour schemes effortlessly using the [The Color API]("https://www.thecolorapi.com/).
+The Color Scheme Generator is a user-friendly web application that allows you to explore and create beautiful colour schemes effortlessly using the [The Color API](https://www.thecolorapi.com/).
 
 ## Live Demo
 
-Try it out [here]("https://glittering-brioche-3fad0b.netlify.app/")!
+Try it out [here](https://glittering-brioche-3fad0b.netlify.app/)!
 
 ## Credit
 
