@@ -8,4 +8,4 @@ Try it out [here](https://glittering-brioche-3fad0b.netlify.app/)!
 
 ## Credit
 
-This project was created as part of the Frontend Developer Career Path by Scrimba. The design of the color scheme generator is based on a Figma file provided by Scrimba. However, the development and implementation was done entirely by me.
+This project was created as part of the Frontend Developer Career Path by Scrimba. The design of the color scheme generator is based on a Figma file provided by Scrimba. However, the development and implementation was done entirely by me. Created with plain HTML, CSS and JavaScript. 
