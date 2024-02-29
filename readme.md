@@ -1,6 +1,6 @@
 # Color Scheme Generator ❤️💛💚💙💜
 
-The Color Scheme Generator is a user-friendly web application that allows you to explore and create beautiful colour schemes effortlessly using the [The Color API](https://www.thecolorapi.com/).
+The Color Scheme Generator is a user-friendly responsive web application that allows you to explore and create beautiful colour schemes effortlessly using the [The Color API](https://www.thecolorapi.com/). 
 
 ## Live Demo
 
