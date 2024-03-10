@@ -2,19 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Test</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="index.css"
+    />
+    <title>Color Scheme Generator</title>
   </head>
   <body>
     <div class="container">
-      <form action="" class="container-form">
-        <input type="color" name="color-picker" id="color-picker" value="#F55A5A" />
+      <form
+        action=""
+        class="container-form"
+      >
+        <input
+          type="color"
+          name="color-picker"
+          id="color-picker"
+          value="#F55A5A"
+        />
         <div class="dropdown">
-          <button type="button" id="dropdown-btn">Monochrome</button>
+          <button
+            type="button"
+            id="dropdown-btn"
+          >
+            Monochrome
+          </button>
           <ul class="dropdown-content">
             <li class="option selected">Monochrome</li>
             <li class="option">Monochrome-dark</li>
@@ -25,7 +54,12 @@
             <li class="option">Triad</li>
           </ul>
         </div>
-        <button id="color-btn" type="submit">Get color scheme</button>
+        <button
+          id="color-btn"
+          type="submit"
+        >
+          Get color scheme
+        </button>
       </form>
       <div class="colors">
         <div class="rectangle"></div>
@@ -35,11 +69,46 @@
         <div class="rectangle"></div>
       </div>
       <div class="codes">
-        <div class="codes-container"><p id="hex1" class="hex">#C01010</p></div>
-        <div class="codes-container"><p id="hex2" class="hex">#ED1515</p></div>
-        <div class="codes-container"><p id="hex3" class="hex">#F24444</p></div>
-        <div class="codes-container"><p id="hex4" class="hex">#F67373</p></div>
-        <div class="codes-container"><p id="hex5" class="hex">#F9A2A2</p></div>
+        <div class="codes-container">
+          <p
+            id="hex1"
+            class="hex"
+          >
+            #C01010
+          </p>
+        </div>
+        <div class="codes-container">
+          <p
+            id="hex2"
+            class="hex"
+          >
+            #ED1515
+          </p>
+        </div>
+        <div class="codes-container">
+          <p
+            id="hex3"
+            class="hex"
+          >
+            #F24444
+          </p>
+        </div>
+        <div class="codes-container">
+          <p
+            id="hex4"
+            class="hex"
+          >
+            #F67373
+          </p>
+        </div>
+        <div class="codes-container">
+          <p
+            id="hex5"
+            class="hex"
+          >
+            #F9A2A2
+          </p>
+        </div>
       </div>
     </div>
     <script src="index.js"></script>
